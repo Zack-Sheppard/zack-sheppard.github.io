@@ -1,0 +1,183 @@
+
+/* CSS Reset */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* end CSS Reset */
+
+.header-links {
+    display: inline-block;
+}
+
+.header-title {
+    display: inline-block;
+    width: 50%;
+    text-align: right;
+}
+
+body {
+    background-color: #CAD2C5;
+    color: #333333;
+    font-family: "Garamond";
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+}
+
+#header {
+    background-color: #369696;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    color: #333333;
+    padding: 18px;
+    min-height: 48px;
+}
+
+#header h1 {
+    display: inline;
+    font-size: 2.5em;
+    margin-left: 36px;
+    margin-right: 128px;
+}
+
+.header-link {
+    display: inline;
+    font-size: 1.75em;
+    margin: 0 24px;
+}
+
+#software-link {
+    background-color: #369696;
+}
+
+#body {
+    padding: 24px;
+}
+
+#me {
+    display: inline-block;
+    vertical-align: top;
+    width: 50%;
+}
+
+/* 416 x 624 */
+#me img {
+    float: right;
+    height: auto;
+    width: 100%;
+    max-height: 624px;
+    max-width: 416px;
+}
+
+.content {
+    height: 100%;
+    width: 50%;
+}
+
+#text {
+    display: inline-block;
+    width: 50%;
+}
+
+.para {
+    display: block;
+    font-size: 1.25em;
+    margin: 0 24px;
+}
+
+.para p {
+    margin-bottom: 12px;
+}
+
+#hint {
+    bottom: 232px;
+    position: absolute;
+}
+
+#software {
+    display: none;
+}
+
+#education {
+    display: none;
+}
+
+#music {
+    display: none;
+}
+
+#footer {
+    margin: 8px;
+    text-align: center;
+}
+
+#hr {
+    width: 20%;
+}
+
+#mobile {
+    display: none;
+}
+
+/*
+    one media query warning that the site
+    is not quite ready for mobile
+*/
+@media (max-width: 768px) {
+    #mobile {
+        color: var(--blackGrey);
+        display: block;
+        font-size: 24px;
+    }
+    .header-title {
+        width: 100%;
+    }
+    .header-links {
+        display: none;
+    }
+    .content {
+        display: none;
+    }
+    #text {
+        display: none;
+    }
+    #me {
+        width: 100%;
+    }
+}
