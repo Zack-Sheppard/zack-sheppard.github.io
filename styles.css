@@ -46,7 +46,6 @@ body {
     background-color: #CAD2C5;
     color: #333333;
     font-family: "Garamond";
-    min-height: 100vh;
     display: grid;
     grid-template-rows: auto 1fr auto;
 }
@@ -55,8 +54,7 @@ body {
     background-color: #369696;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     color: #474747;
-    padding: 18px 0 16px 0;
-    min-height: 48px;
+    padding: 16px 0;
 }
 
 #header h1 {
@@ -76,6 +74,7 @@ body {
 .header-links {
     display: inline-block;
     margin-left: 24px;
+    vertical-align: text-bottom;
 }
 
 .header-link {
@@ -85,7 +84,7 @@ body {
 }
 
 #body {
-    padding: 24px;
+    margin-top: 20px;
 }
 
 #me {
@@ -125,8 +124,8 @@ body {
 }
 
 #hint {
-    bottom: 232px;
-    position: absolute;
+    position: relative;
+    top: 200px;
 }
 
 #software, #education, #music,
@@ -157,23 +156,33 @@ body {
 }
 
 #footer {
-    margin: 8px;
     text-align: center;
 }
 
 #hr {
     width: 256px;
+    margin-top: 12px;
 }
 
-#mobile {
+.mobile {
+    display: none;
+}
+
+.mobile-header {
     display: none;
 }
 
 /*
-    one media query warning that the site
-    is not quite ready for mobile
+    mobile/tablet
 */
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
+    #body {
+        margin-top: 24px;
+        width: 100%;
+    }
+    .desktop {
+        display: none;
+    }
     #mobile {
         color: var(--blackGrey);
         display: block;
@@ -181,17 +190,45 @@ body {
     }
     .header-title {
         width: 100%;
+        text-align: center;
+    }
+    #header h1 {
+        margin: 0;
     }
     .header-links {
         display: none;
     }
     .content {
-        display: none;
+        text-align: left;
     }
     #text {
-        display: none;
+        display: block;
+        margin: auto;
+        margin-top: 24px;
+        text-align: left;
+        width: 100%;
     }
     #me {
-        width: 100%;
+        display: block;
+        margin: auto;
+    }
+    #me img {
+        display: block;
+        margin: auto;
+        float: unset;
+    }
+    .mobile-header {
+        display: block;
+        font-weight: bold;
+        font-size: 1.75em;
+        margin: 24px 0 12px 0;
+    }
+    #software, #education, #music,
+    #software-education, #software-music, #education-music,
+    #software-education-music {
+        display: block;
+    }
+    #footer {
+        margin-top: 24px;
     }
 }
